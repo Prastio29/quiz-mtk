@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Aplikasi Matematika Interaktif SD</title>
+    </head>
+    <body>
+        <div id="header">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Lesson</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="main">
+            <h1>Berhitung Mudah dengan Bantuan Kami</h1>
+            <div id="konten">
+                <p><b>Ilustrasi Menarik<br>Mudah Dipahami</b></p>
+                <img src="img-asset/pose_galpeace_schoolgirl.png" alt="Ilustrasi Siswa">
+            </div>
+
+            <!-- Bagian Aplikasi Matematika Interaktif -->
+            <div id="app-container">
+                <!-- Bar Status Game -->
+                <div class="status-bar">
+                    <div class="stat-item">⭐ Skor: <span id="skor">0</span></div>
+                    <div class="stat-item">🔥 Streak: <span id="streak">0</span></div>
+                    <div class="stat-item">❤️ Nyawa: <span id="nyawa">❤️❤️❤️</span></div>
+                </div>
+
+                <!-- Pilihan Level Kelas -->
+                <div class="level-selector">
+                    <button class="lvl-btn active" data-level="1">Kelas 1-2</button>
+                    <button class="lvl-btn" data-level="2">Kelas 3-4</button>
+                    <button class="lvl-btn" data-level="3">Kelas 5-6</button>
+                </div>
+
+                <!-- Area Soal & Ilustrasi -->
+                <div id="quiz-area">
+                    <div id="ilustrasi-box"></div>
+                    <p id="soal">Memuat soal...</p>
+                    
+                    <div class="input-group">
+                        <input type="number" id="jawaban" placeholder="?" autocomplete="off">
+                        <button id="btn-cek">Jawab</button>
+                    </div>
+                    <p id="hasil"></p>
+                </div>
+
+                <!-- Layar Game Over (Muncul kalau nyawa habis) -->
+                <div id="game-over-area" style="display: none;">
+                    <h2>Yah, Nyawamu Habis! 😢</h2>
+                    <p>Skor Akhir Kamu: <b id="skor-akhir">0</b></p>
+                    <button id="btn-restart">Main Lagi 🔄</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
